@@ -1,0 +1,48 @@
+% egrep -v '^#' .ncmpcpp/config
+mpd_music_dir = "/run/media/tch0wk/8308a428-9657-423c-90b1-e940b687b931/Music"
+
+allow_for_physical_item_deletion = "no"
+
+progressbar_color = "yellow"
+progressbar_elapsed_color = "red"
+progressbar_look = "•○·"
+
+visualizer_look = "-•"
+#visualizer_look = "••"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "Visualizer"
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_sync_interval = "30"
+visualizer_color = "red"
+visualizer_in_stereo = "yes"
+
+message_delay_time = "3"
+playlist_shorten_total_times = "yes"
+playlist_display_mode = "columns"
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
+playlist_editor_display_mode = "columns"
+autocenter_mode = "no"
+centered_cursor = "no"
+user_interface = "alternative"
+follow_now_playing_lyrics = "yes"
+locked_screen_width_part = "60"
+display_bitrate = "yes"
+external_editor = "vim"
+use_console_editor = "yes"
+header_window_color = "cyan"
+volume_color = "red"
+state_line_color = "blue"
+state_flags_color = "red"
+statusbar_color = "green"
+--ignore-config-errors
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mouse_list_scroll_whole_page = "no"
+lines_scrolled = "1"
+
+enable_window_title = "no"
+song_columns_list_format = "(4f)[red]{n} (6f)[blue]{l} (40)[]{t} (23)[red]{a} (15)[green]{b}"
+
+execute_on_song_change = "/home/tch0wk/.ncmpcpp/albumart.sh"
+song_list_format = "                       $2%t $R$5%a "
