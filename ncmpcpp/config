@@ -35,7 +35,7 @@ volume_color = "red"
 state_line_color = "blue"
 state_flags_color = "red"
 statusbar_color = "green"
---ignore-config-errors
+ignore-config-errors
 mpd_host = "127.0.0.1"
 mpd_port = "6600"
 mouse_list_scroll_whole_page = "no"
@@ -44,5 +44,5 @@ lines_scrolled = "1"
 enable_window_title = "no"
 song_columns_list_format = "(4f)[red]{n} (6f)[blue]{l} (40)[]{t} (23)[red]{a} (15)[green]{b}"
 
-execute_on_song_change = "/home/tch0wk/.ncmpcpp/albumart.sh"
+execute_on_song_change = "/home/tch0wk/.ncmpcpp/albumart.sh >/dev/null 2>&1" 
 song_list_format = "                       $2%t $R$5%a "
