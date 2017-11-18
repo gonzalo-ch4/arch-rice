@@ -14,7 +14,7 @@ COVER=/tmp/cover.jpg
     src="$(echo -n "$covers" | head -n1)"
     rm -f "$COVER"
     if [[ -n "$src" ]] ; then
-        convert "$src" "$COVER"
+        cp "$src" "$COVER"
         if [[ -f "$COVER" ]] ; then
             killall -q feh > /dev/null 2>&1
             feh -B black -q -N -Z -g 350x350+1550+25 -^ art "$COVER" > /dev/null 2>&1
