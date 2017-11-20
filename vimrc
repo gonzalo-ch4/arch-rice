@@ -1,4 +1,3 @@
-" /etc/vimrc
 " All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
 " /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
 " you can find below.  If you wish to change any of those settings, you should
@@ -18,11 +17,22 @@ runtime! archlinux.vim
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
 
+" Pathogen
+execute pathogen#infect()
+
 " Powerline
 let g:powerline_pycmd = "py3"
 set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/
 set laststatus=2
 set t_Co=255
+
+" vim-javascript plugin
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+" Clipboard
+set clipboard=unnamedplus
 
 " Encoding
 set encoding=utf-8
@@ -54,3 +64,18 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+
+" Opening braces will be closed automatically 
+inoremap { {<CR><BS>}<Esc>ko
+:inoremap ( ()<Esc>i
+noremap        (  ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap " ""<Esc>i
+inoremap [ []<Esc>i
+
+" Sublimetext indentation
+set shiftwidth=4
+set tabstop=4
+set smarttab
+set smartindent
+set autoindent
