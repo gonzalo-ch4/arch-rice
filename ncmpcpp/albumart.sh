@@ -16,11 +16,11 @@ COVER=/tmp/cover.jpg
     if [[ -n "$src" ]] ; then
         cp "$src" "$COVER"
         if [[ -f "$COVER" ]] ; then
-            killall -q feh > /dev/null 2>&1
-            feh -B black -q -N -Z -g 350x350+1550+25 -^ art "$COVER" > /dev/null 2>&1
-        fi
+            killall -q feh 
+            feh -B black -q -N -Z -g 350x350+1550+21 -^ art "$COVER" 
+		fi
     else
-        killall -q feh > /dev/null 2>&1
-        feh -B black -q -Z -g 350x350+1550+25 -^ art "/home/tch0wk/.ncmpcpp/error404.png" > /dev/null 2>&1
+        killall -q feh
+        feh -B black -q -Z -g 350x350+1550+21 -^ art "/home/tch0wk/.ncmpcpp/error404.png" 
     fi
 } &
